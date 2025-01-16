@@ -4,11 +4,13 @@ import { Code2, Palette, Rocket } from "lucide-react";
 import { useEffect, useRef } from "react";
 
 gsap.registerPlugin(_ScrollTrigger);
-function About() {
+
+const About = () => {
   const aboutRef = useRef(null);
+
   useEffect(() => {
     const ctx = gsap.context(() => {
-      gsap.utils.toArray(".skill-card").forEach((card: any, index: number) => {
+      gsap.utils.toArray(".skill-card").forEach((card, index) => {
         gsap.from(card, {
           scrollTrigger: {
             trigger: card,
@@ -32,40 +34,37 @@ function About() {
           What I Do
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
-          <div className=" skill-card p-8 rounded-xl bg-gradient-to-br from-purple-900/50 to-transparent backdrop-blur-lg border border-purple-500/50">
+          <div className="skill-card p-8 rounded-xl bg-gradient-to-br from-purple-900/50 to-transparent backdrop-blur-lg border border-purple-500/50">
             <Code2 className="w-12 h-12 text-purple-400 mb-6" />
             <h3 className="text-xl font-semibold text-white mb-4">
               Development
             </h3>
             <p className="text-gray-300">
-              Building robust applications with modern technologies and best
-              practices
+              Building robust applications with modern technologies and best practices
             </p>
           </div>
-          <div className=" skill-card p-8 rounded-xl bg-gradient-to-br from-blue-900/50 to-transparent backdrop-blur-lg border border-purple-500/50">
+          <div className="skill-card p-8 rounded-xl bg-gradient-to-br from-blue-900/50 to-transparent backdrop-blur-lg border border-purple-500/50">
             <Palette className="w-12 h-12 text-purple-400 mb-6" />
             <h3 className="text-xl font-semibold text-white mb-4">
               Development
             </h3>
             <p className="text-gray-300">
-              Building robust applications with modern technologies and best
-              practices
+              Building robust applications with modern technologies and best practices
             </p>
           </div>
-          <div className=" skill-card p-8 rounded-xl bg-gradient-to-br from-pink-900/50 to-transparent backdrop-blur-lg border border-purple-500/50">
+          <div className="skill-card p-8 rounded-xl bg-gradient-to-br from-pink-900/50 to-transparent backdrop-blur-lg border border-purple-500/50">
             <Rocket className="w-12 h-12 text-purple-400 mb-6" />
             <h3 className="text-xl font-semibold text-white mb-4">
               Development
             </h3>
             <p className="text-gray-300">
-              Building robust applications with modern technologies and best
-              practices
+              Building robust applications with modern technologies and best practices
             </p>
           </div>
         </div>
       </div>
     </div>
   );
-}
+};
 
 export default About;

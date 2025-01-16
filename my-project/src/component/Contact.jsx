@@ -1,6 +1,6 @@
 import { Mail, MapPin, Phone } from "lucide-react";
 
-function Contact() {
+const Contact = () => {
   return (
     <div className="bg-black py-20 px-4">
       <div className="max-w-6xl mx-auto">
@@ -9,7 +9,7 @@ function Contact() {
             Get In Touch
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-            {/* start info */}
+            {/* Contact Information */}
             <div>
               <h3 className="text-2xl font-semibold text-white mb-6">
                 Contact Information
@@ -29,8 +29,8 @@ function Contact() {
                 </div>
               </div>
             </div>
-            {/* here is input */}
 
+            {/* Contact Form */}
             <form className="space-y-6">
               <div>
                 <input
@@ -62,6 +62,6 @@ function Contact() {
       </div>
     </div>
   );
-}
+};
 
 export default Contact;

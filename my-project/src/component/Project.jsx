@@ -10,7 +10,7 @@ const Projects = () => {
   useEffect(() => {
     const ctx = gsap.context(() => {
       // Animate projects on scroll
-      gsap.utils.toArray(".project-card").forEach((card: any) => {
+      gsap.utils.toArray(".project-card").forEach((card) => {
         gsap.from(card, {
           scrollTrigger: {
             trigger: card,
